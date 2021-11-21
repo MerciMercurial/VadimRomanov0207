@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Романов В.</title> 
+	<link rel="stylesheet" href="jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+	<script src="jquery-ui.js"></script>
+</head>
+<body>
+<h1>Вариант 7</h1>
+<h2>Одни из самых популярных направлений:</h2>
+<img src="https://img-cdn.tinkoffjournal.ru/i/QySq1ZGBeNDZbLAqt6oS5CO267tRPx2zCo6K-kTZ0Yo/w:1200/aHR0cHM6Ly9pbWct/Y2RuLnRpbmtvZmZq/b3VybmFsLnJ1Ly0v/bWFpbl9fX3NodXR0/ZXJzdG9ja180Mzg4/NDMwOTcuOHRqNTlu/NmpnZnYwLmpwZw" alt="" width="300px">	<img src="https://www.riviera-tour.ru/images/riviera-infoblock/0x0x1-media/qk5iw-Park%20Galitskogo.jpg" alt="" width="305px">
+<img src="https://img.geliophoto.com/ufa/01_ufa.jpg" alt="" width="316px">	
+<span id="accordion" >
+	<h2>Казань</h2> <div style="height: 600px;">
+	  <h3>Казань</h3>			
+Казань -   город в Российской Федерации, столица Республики Татарстан, крупный порт на левом берегу реки Волги, при впадении в неё реки Казанки. Один из крупнейших религиозных, экономических, политических, научных, образовательных, культурных и спортивных центров России. Казанский кремль входит в число объектов Всемирного наследия ЮНЕСКО.
+
+. 	
+<br>
+</div>
+	<h2>Краснодар</h2> 
+	<div style="height: 600px;">
+	  <h3>Краснодар</h3>   				
+	  Краснодар -  город на юго-западе России, расположенный на правом берегу реки Кубани, на расстоянии 120 км от Чёрного моря (по автодороге от пос. Джубга), 140 км от Азовского моря (по автодороге от станицы Голубицкой) и 1300 км к югу от Москвы (по автодороге М-4 «Дон»). Вместе с прилегающими сельскими населёнными пунктами образует муниципальное образование город Краснодар со статусом городского округа<br>
+	</div> 
+  <h2>Уфа</h2> 
+	<div style="height: 600px;">
+	  <h3>Уфа</h3>   				
+	 Уфа - Сегодня это крупный, интересный и стремительно развивающийся город. Уфа крайне интересна для путешественников, город сочетает в себе сразу несколько стилей, развивается под влиянием нескольких культур и религий. Город располагается на стыке Европы и Азии, что и определило его многонациональность и мультиконфессиональность.
+
+В Уфе вы увидите соприкосновение крупных автомагистралей и тихих улочек, насыщенной ночной жизни и богатство жизни культурной. Уфа может быть интересна своей культурной, спортивной жизнью, город регулярно принимает крупные международные соревнования и мероприятия.
+
+Открыть карту Открыть карту
+. 
+	</div> 
+	</span>
+  <br>
+  <h2>Заинтересовало? Покупайте билеты!</h2>
+<input type="button" value="Купить билет!" id="buy" style="background-color: white; padding: 10px; color: blue; font-size: large;">
+
+	<div id="dialog" title="Купить билет!">
+        <h3>Данные для билета:</h3>
+        <form>
+          Фамилия: <input type="text"><br><br>
+		 Имя: <input type="text"><br><br>
+     Отчество: <input type="text"><br><br>
+     Дата рождения:  <input type="text"  class="date"><br><br>
+    Город прилета: <input type="text"  class="city"><br><br>
+		Количество багажа (кг): <p style="display: inline;" id="sliderValue"></p>
+    <br><br>
+    <div class="slider" style="width: 100%;"></div> <br>
+    Промо-код: <input type="text" title="У Вас есть промокод? Воспользуйтесь им немедленно!"><br><br>
+          <label>Стоимость: </label><span id="stoim"></span> руб  <span style="font-weight: 900; font-size: large;" title="Расчет производится в зависимости от выбора города и веса багажа.">&#63;</span><br><br>
+        </form>
+        <input type="button" class="kup" value="Купить">
+      </div>
+	  <div class="pp" title="Подтверждение">Вы подтверждаете покупку билета?</div>
+	  <div class="da" title="Готово">Спасибо за приобретение билета! Хорошего полета!</div>
+<script type="text/javascript">
+    $(function(){
+		$("#accordion" ).accordion({  collapsible: true });
+		$('#dialog').dialog({ autoOpen: false, width: 400 });
+		  $.datepicker.regional['ru'] = {
+	closeText: 'Закрыть',
+	prevText: 'Предыдущий',
+	nextText: 'Следующий',
+	currentText: 'Сегодня',
+	monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+	monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+	dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+	dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+	dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+	weekHeader: 'Не',
+	dateFormat: 'dd.mm.yy',
+	firstDay: 1,
+	isRTL: false,
+	showMonthAfterYear: false,
+	yearSuffix: ''
+};
+	$.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
+		  $(".date").datepicker({ });
+		$("#buy").click(function(){ 
+        $( "#dialog" ).dialog('open'); 
+      })
+	  var city = ["Казань", "Сочи", "Санкт-Петербург"]; 
+	  $(".city" ).click(function(){
+		$(".city").autocomplete({ source: city });  
+	}); 
+	$('.slider').slider({
+		    min: 0,
+	    	max: 30,
+        change: function (event, ui){
+            var val = $('.slider').slider('value');
+            $('#sliderValue').html(val);
+            var k = $('#sliderValue').html();
+            var stoim = 2500*(1+k/10);
+            document.getElementById('stoim').innerHTML = Math.floor(stoim);
+        }
+    });
+  $( function() {
+    $( document ).tooltip();
+  } );
+  $(".kup" ).click(function(){
+		$('.pp').dialog('open'); })
+	$('.pp').dialog({ autoOpen: false, width: 300, buttons:{
+        "Да!": function(){ $( ".da" ).dialog('open'),$('.pp').dialog('close'), 	$('#dialog').dialog('close');   },
+        "Нет": function(){$('.pp').dialog('close'), 	$('#dialog').dialog('close'); }
+    }})
+	$( ".da" ).dialog({autoOpen: false, width: 300}); 
+	})
+
+	</script>
+</body>
+</html>
