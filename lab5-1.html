@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Халиуллин А.</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="jquery-ui.js"></script>
+<script src="jquery.myPlugin.js"></script>
+    </head>
+    <body>
+
+        <div id="start" title="Игра">Помогите Колобку убежать от Лисы! Нажимайте на <span style="font-weight: 600;">пробел</span> и перепрыгивайте через неё</div>
+        <script type="text/javascript">
+        $( "#start" ).dialog({width: 500, buttons:{
+        "Начать игру": function() { $('#start').myPlugin('start'); $( "#start" ).dialog('close')}}});
+             </script>
+            </body>
+    </html> 
