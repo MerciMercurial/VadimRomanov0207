@@ -1,0 +1,46 @@
+<html>
+<head>
+       <title>Романов В.</title>
+    </head>
+    <body>
+        <meta charset = "UTF-8">
+        <img id="cat_engine_logo" class="drag" src="https://coub-anubis-a.akamaized.net/coub_storage/coub/simple/cw_timeline_pic/b70b7cac0df/a03fdf38092e8053d67ba/med_1598705724_image.jpg"
+            style="position: absolute;">
+    </body>
+
+    <script language="JavaScript" src="../../jquery.js"></script>
+
+        <script language="JavaScript">
+            var cat = document.getElementById('cat_engine_logo');
+
+            cat.ondragstart = function() {
+                return false;
+            };
+
+            cat.onmousedown = function(e){
+                var coords = getCoords(cat);
+                var shiftX = e.pageX - coords.left;
+                var shiftY = e.pageY - coords.top;
+
+
+                document.onmousemove = function(e) {
+                    cat.style.left = e.pageX - shiftX + 'px';
+                    cat.style.top = e.pageY - shiftY + 'px';
+                }
+
+                cat.onmouseup = function() {
+                    document.onmousemove = null;
+                    cat.onmouseup = null;
+                }
+            }
+
+            function getCoords(elem) {
+                var box = elem.getBoundingClientRect();
+                return {
+                    top: box.top + pageYOffset,
+                    left: box.left + pageXOffset
+                };
+            }
+
+        </script>
+</html>
