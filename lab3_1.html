@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Романов В.</title> 
+	<script type="text/javascript" src="jquery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Новости</h1>
+<h3>«Земля войны.»</h3>
+<p>Афганистан пытались покорить Британия, США и СССР. Почему это удалось только талибам?</p>
+<img src="https://icdn.lenta.ru/images/2021/11/02/15/20211102154655842/top7_3d721b9e7cd454545a8ef28ad34143a2.jpg" width="300px" alt=""><br>
+<br>
+<h3>Наш спаситель</h3>
+<p>Как семья президента Таджикистана десятилетиями купается в роскоши, пока народ прозябает в нищете?</p>
+<img src="https://icdn.lenta.ru/images/2021/11/18/20/20211118200844718/top7_413cd87afa4dea4ee4bad5ad8eaa59be.jpg" width="300px" alt=""><br>
+<br>
+<h3>«Я обаятельный мерзавец»</h3>
+<p>Звезда «Ширли-мырли» Валерий Гаркалин умер от коронавируса. Каким его запомнят россияне?</p>
+<img src="https://icdn.lenta.ru/images/2021/11/21/06/20211121060409762/top7_8b26471c1a05a97e5d9c6e0b807f1328.jpg" width="300px" alt=""><br>
+<br>
+<h3>«Здесь не только море и религиозные святыни»</h3>
+<p>Израиль открывается для туристов из России. Ради чего туда стоит полететь?</p>
+<img src="https://icdn.lenta.ru/images/2021/11/17/17/20211117171504278/top7_d05fd2aad8e352747b03d0d882c60ac4.jpg" width="300px" alt=""><br>
+<br> 
+<h3>«Метастазы на теле демократии»</h3>
+<p> Facebook превратилась в Meta. Спасет ли это соцсеть после мощного удара по репутации?</p>
+<img src="https://icdn.lenta.ru/images/2021/11/19/15/20211119150742116/top7_c206f838a0c39a984559dd75a3e4643e.jpg" width="300px" alt=""><br>
+<br> 
+</div>
+<script type="text/javascript">
+	let tek = 5;
+			function lab(str) {
+				if (str.length==0) {
+    document.getElementById("j").innerHTML="";
+    return;}
+  if (window.XMLHttpRequest) {
+    xmlhttp=new XMLHttpRequest();} else { 
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("j").innerHTML=this.responseText;
+    }}
+		xmlhttp.open("GET","1.php?tek="+tek,true);
+		xmlhttp.send();
+		tek+=5;}
+		 </script>
+	<span id = "j"></span>
+	<form>
+		<input onclick = "lab(this.value)" type="button" value="еще новости">
+	</form>
+</body>
+</html>
