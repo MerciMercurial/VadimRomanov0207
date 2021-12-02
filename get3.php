@@ -1,5 +1,5 @@
 ﻿<?php
-$db_host = "localhost";
+$db_host = http://f0601807.xsph.ru/;
 $db_name = "albert";
 $db_user = "root";
 $db_pass = "root";
